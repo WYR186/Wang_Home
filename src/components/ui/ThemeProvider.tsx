@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useThemeStore, resolveTheme } from '@/lib/stores/themeStore';
+import { useThemeStore, resolveTheme, resolveDataTheme } from '@/lib/stores/themeStore';
 
 type MediaQueryListWithDeprecated = MediaQueryList & {
   addListener?: (listener: (this: MediaQueryList, ev: MediaQueryListEvent) => void) => void;
@@ -23,9 +23,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     const apply = () => {
       const effective = resolveTheme(theme);
+      const dataTheme = resolveDataTheme(theme);
       root.classList.remove('light', 'dark');
       root.classList.add(effective);
-      root.setAttribute('data-theme', effective);
+      root.setAttribute('data-theme', dataTheme);
     };
 
     apply();

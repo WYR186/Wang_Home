@@ -1,0 +1,128 @@
+type = "card"
+gallery = true
+title = "Photography"
+description = "A curated visual diary of light, texture, and motion."
+
+[[items]]
+title = ""
+image = "/photography/1.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/2.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/3.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/4.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/5.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/6.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/7.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/8.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/9.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/10.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/11.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/12.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/13.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/14.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/15.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/16.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/17.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/18.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/19.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/20.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/21.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/22.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/23.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/24.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/25.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/26.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/27.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/28.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/29.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/30.jpeg"
+
+[[items]]
+title = ""
+image = "/photography/31.jpeg"

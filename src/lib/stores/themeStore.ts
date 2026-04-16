@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
-export type Theme = 'light' | 'dark' | 'system';
+export type Theme = 'light' | 'dark' | 'system' | 'illini';
 
 interface ThemeStore {
   theme: Theme;
@@ -48,17 +48,28 @@ function getSystemPrefersDark(): boolean {
 }
 
 export function resolveTheme(theme: Theme): 'light' | 'dark' {
+  if (theme === 'illini') {
+    return 'light';
+  }
   if (theme === 'system') {
     return getSystemPrefersDark() ? 'dark' : 'light';
   }
   return theme;
 }
 
+export function resolveDataTheme(theme: Theme): 'light' | 'dark' | 'illini' {
+  if (theme === 'illini') {
+    return 'illini';
+  }
+  return resolveTheme(theme);
+}
+
 function updateTheme(theme: Theme) {
   const effective = resolveTheme(theme);
+  const dataTheme = resolveDataTheme(theme);
   // Update DOM
   const root = document.documentElement;
   root.classList.remove('light', 'dark');
   root.classList.add(effective);
-  root.setAttribute('data-theme', effective);
+  root.setAttribute('data-theme', dataTheme);
 }

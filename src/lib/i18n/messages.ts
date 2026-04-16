@@ -10,6 +10,7 @@ export interface LocaleMessages {
     system: string;
     light: string;
     dark: string;
+    illini: string;
     currentTheme: string;
     cycleTheme: string;
   };
@@ -60,6 +61,7 @@ const en: LocaleMessages = {
     system: 'System',
     light: 'Light',
     dark: 'Dark',
+    illini: 'Illini',
     currentTheme: 'Current theme',
     cycleTheme: 'Click to cycle theme',
   },
@@ -110,6 +112,7 @@ const zh: LocaleMessages = {
     system: '跟随系统',
     light: '浅色',
     dark: '深色',
+    illini: '伊利诺伊',
     currentTheme: '当前主题',
     cycleTheme: '点击切换主题',
   },

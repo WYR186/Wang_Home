@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/outline';
+import { SunIcon, MoonIcon, ComputerDesktopIcon, SwatchIcon } from '@heroicons/react/24/outline';
 import { useThemeStore, type Theme } from '@/lib/stores/themeStore';
 import { useMessages } from '@/lib/i18n/useMessages';
 import { cn } from '@/lib/utils';
@@ -32,6 +32,11 @@ function useThemeOptions(): ThemeOption[] {
       value: 'dark',
       label: messages.theme.dark,
       icon: <MoonIcon className="h-4 w-4" />,
+    },
+    {
+      value: 'illini',
+      label: messages.theme.illini,
+      icon: <SwatchIcon className="h-4 w-4" />,
     },
   ];
 }
@@ -64,7 +69,7 @@ export function ThemeToggle() {
         type="button"
         onMouseDown={(e) => e.preventDefault()}
         onClick={() => {
-          const order: Theme[] = ['system', 'light', 'dark'];
+          const order: Theme[] = ['system', 'light', 'dark', 'illini'];
           const index = order.indexOf(theme);
           const next = order[(index + 1) % order.length];
           setTheme(next);
@@ -88,6 +93,8 @@ export function ThemeToggle() {
             <ComputerDesktopIcon className="h-4 w-4" />
           ) : theme === 'dark' ? (
             <MoonIcon className="h-4 w-4" />
+          ) : theme === 'illini' ? (
+            <SwatchIcon className="h-4 w-4" />
           ) : (
             <SunIcon className="h-4 w-4" />
           )}

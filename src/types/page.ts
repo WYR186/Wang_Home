@@ -26,5 +26,6 @@ export interface CardItem {
 
 export interface CardPageConfig extends BasePageConfig {
     type: 'card';
+    gallery?: boolean;
     items: CardItem[];
 }

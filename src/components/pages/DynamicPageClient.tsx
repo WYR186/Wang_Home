@@ -30,8 +30,13 @@ export default function DynamicPageClient({ dataByLocale, defaultLocale }: Dynam
     return null;
   }
 
+  const containerClassName =
+    pageData.type === 'card' && pageData.config.gallery
+      ? 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'
+      : 'max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12';
+
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className={containerClassName}>
       {pageData.type === 'publication' && (
         <PublicationsList config={pageData.config} publications={pageData.publications} />
       )}

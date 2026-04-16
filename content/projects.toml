@@ -1,0 +1,24 @@
+type = "card"
+title = "Projects"
+description = "Selected engineering and software projects."
+
+[[items]]
+title = "RISC-V Operating System"
+subtitle = "C, RISC-V, QEMU, GDB"
+date = "Jan 2026 - Present"
+content = "Built core components of a teaching OS for RISC-V, including trap handling, interrupt-driven I/O, dynamic memory support, and kernel-level threading. Implemented UART/RTC/VirtIO-related drivers and used QEMU + GDB low-level debugging to resolve race conditions, device-state issues, and memory faults."
+tags = ["Operating Systems", "RISC-V", "Systems Programming"]
+
+[[items]]
+title = "Android Native Media Processing"
+subtitle = "C++, Python, Android NDK, OpenCV"
+date = "Nov 2025 - Mar 2026"
+content = "Implemented media-processing modules across audio, image, and video workflows, including FIR/notch filtering and FFT/STFT-based spectrogram generation. Prototyped in Python, then integrated selected modules into Android native C++/NDK pipelines and validated output quality and performance."
+tags = ["Android", "Computer Vision", "Signal Processing"]
+
+[[items]]
+title = "Automated Microscopy Imaging Pipeline"
+subtitle = "Python, FIJI, StarDist, GPU Inference"
+date = "Feb 2025 - Sep 2025"
+content = "Built an automated microscopy workflow for particle-size analysis with grayscale preprocessing, flat-field correction, tiling, segmentation, and batch export. Improved segmentation accuracy by about 40%, processed around 420 objects per image, and optimized tiled GPU inference for about 3x throughput."
+tags = ["Research", "Image Processing", "Machine Learning"]

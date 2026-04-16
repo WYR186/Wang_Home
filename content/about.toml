@@ -3,9 +3,10 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Computational Physics",
-  "Mathematical Principles",
-  "Proof of Theorems"
+  "Operating Systems",
+  "Computer Vision",
+  "Machine Learning Systems",
+  "Embedded and Low-level Programming"
 ]
 
 [[sections]]
@@ -13,17 +14,4 @@ id = "about"
 type = "markdown"
 source = "bio.md"
 title = "About"
-
-[[sections]]
-id = "featured_publications"
-type = "publications"
-title = "Selected Publications"
-filter = "selected"
-limit = 5
-
-[[sections]]
-id = "news"
-type = "list"
-title = "News"
-source = "news.toml"
 

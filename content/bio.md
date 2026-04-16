@@ -1,5 +1,27 @@
-I am a PhD student at the School of Science, University of Example, advised by [Prof. Advisor One](https://example.com) and [Dr. Advisor Two](https://example.com).
+I am **Yiren (Aaron) Wang**, a Computer Engineering undergraduate at the University of Illinois Urbana-Champaign (expected graduation: **May 2027**).
 
-Prior to this, I obtained a BSc degree with First Class Honours in Natural Science from the University of Example.
+My core interests are in **systems and intelligent computing**, especially at the intersection of:
 
-My current research focuses on investigating the mathematical principles of natural philosophy.
+- Operating systems and low-level runtime behavior
+- Computer vision and ML-assisted perception
+- Full-stack AI product engineering
+
+I enjoy building reliable end-to-end software, from kernel-level or performance-critical components to production-ready web applications.
+
+### What I am working on
+
+- Building a RISC-V teaching OS with threading, interrupt-driven I/O, and low-level debugging
+- Developing practical AI workflows with retrieval systems and full-stack deployment
+- Exploring imaging pipelines for scientific/engineering use cases
+
+### Engineering profile
+
+- Comfortable across both rapid prototyping and production implementation
+- Hands-on with Python, C/C++, TypeScript, FastAPI, React/Next.js, Docker, and AWS
+- Strong interest in turning complex technical ideas into usable tools
+
+### Explore more
+
+- Projects: `/projects`
+- Resume: `/cv`
+- GitHub: [github.com/WYR186](https://github.com/WYR186)

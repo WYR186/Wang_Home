@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -32,6 +32,7 @@ export default function Navigation({
   siteTitleByLocale,
 }: NavigationProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const locale = useLocaleStore((state) => state.locale);
   const [scrolled, setScrolled] = useState(false);
   const [activeHash, setActiveHash] = useState('');
@@ -124,6 +125,12 @@ export default function Navigation({
   const getDesktopItemHref = (item: SiteConfig['navigation'][number]) =>
     enableOnePageMode ? `/#${item.target}` : item.href;
 
+  const handleAboutNavigation = useCallback((event: React.MouseEvent<HTMLElement>) => {
+    event.preventDefault();
+    router.push('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [router]);
+
   const activeItem = effectiveItems.find((item) => isDesktopItemActive(item)) ?? null;
   const activeHref = activeItem ? getDesktopItemHref(activeItem) : null;
   const indicatorHref = hoveredHref ?? activeHref;
@@ -182,6 +189,7 @@ export default function Navigation({
                 >
                   <Link
                     href="/"
+                    onClick={handleAboutNavigation}
                     className="text-xl lg:text-2xl font-serif font-semibold text-primary hover:text-accent transition-colors duration-200"
                   >
                     {effectiveSiteTitle}
@@ -227,7 +235,13 @@ export default function Navigation({
                             href={href}
                             data-nav-href={href}
                             prefetch={true}
-                            onClick={() => enableOnePageMode && setActiveHash(`#${item.target}`)}
+                            onClick={(event) => {
+                              if (!enableOnePageMode && item.target === 'about') {
+                                handleAboutNavigation(event);
+                                return;
+                              }
+                              enableOnePageMode && setActiveHash(`#${item.target}`);
+                            }}
                             onMouseEnter={() => setHoveredHref(href)}
                             className={cn(
                               'relative px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-150',
@@ -302,7 +316,13 @@ export default function Navigation({
                             as={Link}
                             href={href}
                             prefetch={true}
-                            onClick={() => enableOnePageMode && setActiveHash(item.href === '/' ? '' : `#${item.target}`)}
+                            onClick={(event) => {
+                              if (!enableOnePageMode && item.target === 'about') {
+                                handleAboutNavigation(event);
+                                return;
+                              }
+                              enableOnePageMode && setActiveHash(item.href === '/' ? '' : `#${item.target}`);
+                            }}
                             className={cn(
                               'block px-3 py-2 rounded-md text-base font-medium transition-all duration-200',
                               isActive
