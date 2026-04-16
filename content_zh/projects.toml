@@ -22,3 +22,10 @@ subtitle = "Python, FIJI, StarDist, GPU 推理"
 date = "2025年2月 - 2025年9月"
 content = "搭建显微图像自动分析流程，覆盖灰度预处理、平场校正、图像切块、实例分割与批量导出。通过优化预处理和参数，将分割精度提升约 40%，单图可验证约 420 个目标，并将分块 GPU 推理吞吐提升约 3 倍。"
 tags = ["科研项目", "图像处理", "机器学习"]
+
+[[items]]
+title = "Maze Solver 迷宫求解器"
+subtitle = "C++, DFS/BFS/Dijkstra/A*"
+date = "2025年"
+content = "随机迷宫生成与路径搜索工具，支持 DFS、BFS、Dijkstra、A*。 [运行交互演示](/games/maze-solver/) | [查看源码仓库](https://github.com/WYR186/Coding-Package)"
+tags = ["算法", "路径规划", "C++"]

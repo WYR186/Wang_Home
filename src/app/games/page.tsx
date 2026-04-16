@@ -13,6 +13,12 @@ const gameItems = [
     href: "/games/2048/",
     cta: "Play 2048",
   },
+  {
+    title: "Maze Solver",
+    description: "Generate a random maze and solve with DFS/BFS/Dijkstra/A*.",
+    href: "/games/maze-solver/",
+    cta: "Run Maze Solver",
+  },
 ];
 
 export default function GamesPage() {
