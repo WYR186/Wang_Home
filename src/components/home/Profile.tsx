@@ -15,6 +15,14 @@ import { Github, Linkedin, Pin } from 'lucide-react';
 import type { SiteConfig } from '@/lib/config';
 import { useMessages } from '@/lib/i18n/useMessages';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+function withBasePath(url: string): string {
+    if (!url.startsWith('/')) return url;
+    if (!basePath) return url;
+    return `${basePath}${url}`;
+}
+
 // Custom ORCID icon component
 const OrcidIcon = ({ className }: { className?: string }) => (
     <svg
@@ -114,7 +122,7 @@ export default function Profile({ author, social, features, researchInterests }:
             {/* Profile Image */}
             <div className="w-64 h-64 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105">
                 <Image
-                    src={author.avatar}
+                    src={withBasePath(author.avatar)}
                     alt={author.name}
                     width={256}
                     height={256}

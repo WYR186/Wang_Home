@@ -4,6 +4,14 @@ import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import { TextPageConfig } from '@/types/page';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+function withBasePath(url: string): string {
+    if (!url.startsWith('/')) return url;
+    if (!basePath) return url;
+    return `${basePath}${url}`;
+}
+
 interface TextPageProps {
     config: TextPageConfig;
     content: string;
@@ -34,9 +42,10 @@ export default function TextPage({ config, content, embedded = false }: TextPage
                         ul: ({ children }) => <ul className="list-disc list-inside mb-4 space-y-1 ml-4">{children}</ul>,
                         ol: ({ children }) => <ol className="list-decimal list-inside mb-4 space-y-1 ml-4">{children}</ol>,
                         li: ({ children }) => <li className="mb-1">{children}</li>,
-                        a: ({ ...props }) => (
+                        a: ({ href, ...props }: React.ComponentProps<'a'>) => (
                             <a
                                 {...props}
+                                href={href ? withBasePath(href) : href}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-accent font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
