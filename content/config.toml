@@ -63,10 +63,10 @@ href = "/photography"
 title = "Games"
 type = "page"
 target = "games"
-href = "/games"
+href = "/games/"
 
 [[navigation]]
 title = "CV"
 type = "page"
 target = "cv"
-href = "/cv"
+href = "/cv/"

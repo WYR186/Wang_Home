@@ -4,13 +4,13 @@ const gameItems = [
   {
     title: "Snake 2020",
     description: "Classic snake with WASD/arrow controls.",
-    href: "/snake-2020",
+    href: "/snake-2020/",
     cta: "Play Snake",
   },
   {
     title: "2048",
     description: "Combine tiles to reach 2048.",
-    href: "/games/2048",
+    href: "/games/2048/",
     cta: "Play 2048",
   },
 ];

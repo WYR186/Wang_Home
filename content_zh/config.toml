@@ -36,10 +36,10 @@ href = "/photography"
 title = "游戏"
 type = "page"
 target = "games"
-href = "/games"
+href = "/games/"
 
 [[navigation]]
 title = "简历"
 type = "page"
 target = "cv"
-href = "/cv"
+href = "/cv/"

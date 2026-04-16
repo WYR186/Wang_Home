@@ -6,14 +6,23 @@ import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import { CardPageConfig } from '@/types/page';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+function withBasePath(url: string): string {
+    if (!url.startsWith('/')) return url;
+    if (!basePath) return url;
+    return `${basePath}${url}`;
+}
+
 const markdownComponents = {
     p: ({ children }: React.ComponentProps<'p'>) => <p className="mb-3 last:mb-0">{children}</p>,
     ul: ({ children }: React.ComponentProps<'ul'>) => <ul className="list-disc list-inside mb-3 space-y-1">{children}</ul>,
     ol: ({ children }: React.ComponentProps<'ol'>) => <ol className="list-decimal list-inside mb-3 space-y-1">{children}</ol>,
     li: ({ children }: React.ComponentProps<'li'>) => <li className="mb-1">{children}</li>,
-    a: ({ ...props }) => (
+    a: ({ href, ...props }: React.ComponentProps<'a'>) => (
         <a
             {...props}
+            href={href ? withBasePath(href) : href}
             target="_blank"
             rel="noopener noreferrer"
             className="text-accent font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
@@ -78,7 +87,7 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                 resolve([item.image, ratio]);
             };
             img.onerror = () => resolve([item.image, 1]);
-            img.src = item.image;
+            img.src = withBasePath(item.image);
         }));
 
         Promise.all(probes).then((entries) => {
@@ -163,7 +172,7 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                                     >
                                         <div className="w-full rounded-[1.6rem] overflow-hidden bg-transparent">
                                             <img
-                                                src={item.image}
+                                                src={withBasePath(item.image)}
                                                 alt={`Photo ${originalIndex + 1}`}
                                                 className="block w-full h-auto object-contain rounded-[1.6rem] transition-transform duration-700 ease-out group-hover:scale-[1.012]"
                                                 loading="lazy"
@@ -199,7 +208,7 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                             {item.image && (
                                 <div className="mb-4 relative aspect-video rounded-lg overflow-hidden">
                                     <Image
-                                        src={item.image}
+                                        src={withBasePath(item.image)}
                                         alt={item.title}
                                         fill
                                         className="object-cover"
@@ -267,7 +276,7 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                             onClick={(event) => event.stopPropagation()}
                         >
                             <Image
-                                src={galleryItems[activeImageIndex].image}
+                                src={withBasePath(galleryItems[activeImageIndex].image)}
                                 alt={`Photo ${activeImageIndex + 1}`}
                                 fill
                                 className="object-contain"

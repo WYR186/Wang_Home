@@ -1,10 +1,15 @@
 import type { NextConfig } from "next";
 
+const basePath = '/Wang_Home';
+
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/Wang_Home',
-  assetPrefix: '/Wang_Home/',
+  basePath,
+  assetPrefix: `${basePath}/`,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     unoptimized: true,
   },
