@@ -8,7 +8,7 @@
 
 这是 **Yiren (Aaron) Wang** 的个人学术/工程主页（UIUC Computer Engineering），基于 Next.js 与内容配置驱动结构构建。
 
-![网站预览](screenshot.png)
+![网站预览](screenshot-v2.png)
 
 ## 致谢与来源
 

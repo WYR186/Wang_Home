@@ -8,7 +8,7 @@
 
 Personal academic/engineering homepage for **Yiren (Aaron) Wang** (Computer Engineering @ UIUC), built with Next.js and a content-driven structure.
 
-![Website Preview](screenshot.png)
+![Website Preview](screenshot-v2.png)
 
 ## Attribution
 
