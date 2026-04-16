@@ -52,8 +52,9 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
 
 export function generateStaticParams() {
   const config = getConfig();
+  const dedicatedRoutes = new Set(['games']);
   return config.navigation
-    .filter((nav) => nav.type === 'page' && nav.target !== 'about')
+    .filter((nav) => nav.type === 'page' && nav.target !== 'about' && !dedicatedRoutes.has(nav.target))
     .map((nav) => ({
       slug: nav.target,
     }));
