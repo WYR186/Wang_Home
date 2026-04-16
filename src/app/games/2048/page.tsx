@@ -42,7 +42,7 @@ function rotateClockwise(board: Board): Board {
 }
 
 function normalizeDirection(board: Board, direction: Direction): Board {
-  let normalized = board.map((row) => [...row]);
+  const normalized = board.map((row) => [...row]);
 
   if (direction === "left") return normalized;
   if (direction === "up") return rotateClockwise(rotateClockwise(rotateClockwise(normalized)));
