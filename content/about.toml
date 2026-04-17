@@ -3,10 +3,10 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Operating Systems",
-  "Computer Vision",
-  "Machine Learning Systems",
-  "Embedded and Low-level Programming"
+  "AI Agents",
+  "Hardware-Software Co-design",
+  "Embedded Systems",
+  "Robotics"
 ]
 
 [[sections]]

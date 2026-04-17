@@ -3,10 +3,10 @@ title = "关于我"
 
 [profile]
 research_interests = [
-  "操作系统",
-  "计算机视觉",
-  "机器学习系统",
-  "嵌入式与底层编程"
+  "AI Agent",
+  "软硬件协同设计",
+  "嵌入式系统",
+  "机器人"
 ]
 
 [[sections]]

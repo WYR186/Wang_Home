@@ -1,10 +1,10 @@
 I am **Yiren (Aaron) Wang**, a Computer Engineering undergraduate at the University of Illinois Urbana-Champaign (expected graduation: **May 2027**).
 
-My core interests are in **systems and intelligent computing**, especially at the intersection of:
+My core interests are in **AI agents and intelligent systems engineering**, especially:
 
-- Operating systems and low-level runtime behavior
-- Computer vision and ML-assisted perception
-- Full-stack AI product engineering
+- AI agent systems and practical deployment
+- Hardware-software co-design
+- Embedded systems and robotics
 
 I enjoy building reliable end-to-end software, from kernel-level or performance-critical components to production-ready web applications.
 
