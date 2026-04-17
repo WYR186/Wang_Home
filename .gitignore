@@ -42,3 +42,6 @@ next-env.d.ts
 
 # wrangler
 .wrangler
+
+# local troubleshooting notes
+DEPLOY_TROUBLESHOOTING.md

@@ -1,0 +1,10 @@
+type = "card"
+title = "博客"
+description = "我的文章、笔记与技术分析。"
+
+[[items]]
+title = "Asta Paper Finder 内部机制"
+subtitle = "LLM 搜索流水线、相关性判断与混合排序"
+date = "2026-04"
+content = "基于公开博客与开源快照，对 Asta 的查询路由、逐项相关性判断和排序策略做了工程化拆解。 [阅读全文](/blog/asta-find-paper/)"
+tags = ["LLM系统", "学术搜索", "排序系统"]

@@ -1,0 +1,10 @@
+type = "card"
+title = "Blog"
+description = "Articles, notes, and technical deep dives."
+
+[[items]]
+title = "Inside Asta Paper Finder"
+subtitle = "LLM Search Pipeline, Relevance Judgment, Hybrid Ranking"
+date = "Apr 2026"
+content = "Inside Asta Paper Finder: a short deep dive into its LLM search pipeline, relevance judgment, and ranking strategy. [Read article](/blog/asta-find-paper/)"
+tags = ["LLM Systems", "Scientific Search", "Ranking"]

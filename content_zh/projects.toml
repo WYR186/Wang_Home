@@ -3,6 +3,20 @@ title = "项目展示"
 description = "计算机工程与软件方向项目。"
 
 [[items]]
+title = "TreeFlow"
+subtitle = "Next.js, React, TypeScript, Zustand, Framer Motion"
+date = "2026年4月"
+content = "开发了一个教学导向的树算法可视化平台，采用 step-driven 架构，实现丝滑动画、多面板同步（代码/讲解/状态）与中英文实时切换。当前已完成 Stage 9 产品化能力，包括 Demo Flow、会话分享、Compare/Practice 增强和本地学习分析。"
+tags = ["教育科技", "数据结构", "算法可视化"]
+
+[[items]]
+title = "个人网站"
+subtitle = "Next.js, React, TypeScript, Tailwind CSS, Framer Motion, Zustand"
+date = "2025年12月"
+content = "独立设计并开发了中英双语个人网站，用于展示项目、小游戏、摄影、博客与简历内容；采用响应式布局、动效交互与结构化内容配置，便于持续维护和扩展。"
+tags = ["Web 开发", "个人作品集", "前端"]
+
+[[items]]
 title = "RISC-V 操作系统"
 subtitle = "C, RISC-V, QEMU, GDB"
 date = "2026年1月 - 至今"
@@ -26,6 +40,6 @@ tags = ["科研项目", "图像处理", "机器学习"]
 [[items]]
 title = "Maze Solver 迷宫求解器"
 subtitle = "C++, DFS/BFS/Dijkstra/A*"
-date = "2025年"
-content = "随机迷宫生成与路径搜索工具，支持 DFS、BFS、Dijkstra、A*。 [运行交互演示](/games/maze-solver/) | [查看源码仓库](https://github.com/WYR186/Coding-Package)"
+date = "2025年3月 - 2025年5月"
+content = "该项目完成于 CS225（Data Structures）课程末期与结课阶段，用随机迷宫生成与路径搜索（DFS/BFS/Dijkstra/A*）来展示我对课程部分核心算法的理解；同时也希望为未来学习数据结构的同学提供一个直观的学习示例。 [运行交互演示](/games/maze-solver/) | [查看源码仓库](https://github.com/WYR186/Coding-Package)"
 tags = ["算法", "路径规划", "C++"]

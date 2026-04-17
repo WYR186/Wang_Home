@@ -3,6 +3,20 @@ title = "Projects"
 description = "Selected engineering and software projects."
 
 [[items]]
+title = "TreeFlow"
+subtitle = "Next.js, React, TypeScript, Zustand, Framer Motion"
+date = "Apr 2026"
+content = "Built a teaching-first tree algorithm visualization platform with smooth step-driven animation, synchronized code/explanation panels, and real-time Chinese-English switching. Shipped Stage 9 productization features including demo flows, session sharing, compare/practice upgrades, and local learning analytics."
+tags = ["EdTech", "Data Structures", "Algorithm Visualization"]
+
+[[items]]
+title = "Personal Portfolio Website"
+subtitle = "Next.js, React, TypeScript, Tailwind CSS, Framer Motion, Zustand"
+date = "Dec 2025"
+content = "Designed and developed my bilingual personal website to showcase projects, games, photography, blog posts, and CV content in a clean, responsive interface with animated interactions and structured content configuration."
+tags = ["Web Development", "Portfolio", "Frontend"]
+
+[[items]]
 title = "RISC-V Operating System"
 subtitle = "C, RISC-V, QEMU, GDB"
 date = "Jan 2026 - Present"
@@ -26,6 +40,6 @@ tags = ["Research", "Image Processing", "Machine Learning"]
 [[items]]
 title = "Maze Solver"
 subtitle = "C++, DFS/BFS/Dijkstra/A*"
-date = "2025"
-content = "Random maze generation and pathfinding toolkit featuring DFS, BFS, Dijkstra, and A* strategies. [Run interactive web demo](/games/maze-solver/) | [View source repo](https://github.com/WYR186/Coding-Package)"
+date = "Mar 2025 - May 2025"
+content = "Built at the end of CS225 (Data Structures) to demonstrate my understanding of core course algorithms through a maze generation and pathfinding toolkit (DFS/BFS/Dijkstra/A*). Created as a learning-oriented demo to help future students studying data structures. [Run interactive web demo](/games/maze-solver/) | [View source repo](https://github.com/WYR186/Coding-Package)"
 tags = ["Algorithms", "Pathfinding", "C++"]
